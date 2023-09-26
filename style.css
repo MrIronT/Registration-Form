@@ -21,22 +21,44 @@ body {
     width: 100%;
     background: #fff;
     border-radius: 10px;
-}
-
-.form {
     padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
+.container form {
+    position: relative;
+    min-height: 490px;
+    background-color: #fff;
+    margin-top: 16px;
+}
+
+.container header {
+    position: relative;
     text-align: left;
-    padding: 40px 0 0 40px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
+    color: #333;
+}
+
+.container header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 25px;
+    height: 5px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form .details {
+    margin-top: 10px;
 }
 
 .fields {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -44,25 +66,41 @@ header {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    margin: 4px 0;
+    width: calc(100% (3-15px));
 }
 
-input {
-    height: 50px;
-    min-width: 250px;
-    border-radius: 10px;
-    border: 1px solid #999;
+.input-field input {
+    height: 42px;
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    outline: none;
+    min-width: 230px;
 }
 
-label {
+.input-field input:is(:active, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+
+}
+
+.container form .title {
+    display: block;
+    margin-bottom: 8px;
     font-size: 16px;
-    font-weight: 400;
-
-}
-
-.title {
-    font-size: 20px;
-    font-weight: 400;
-    margin: 20px 0 20px 10px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
 }
 
 ::placeholder {
