@@ -11,77 +11,151 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
     <body>
         <div class="container">
             <header>Registration</header>
-            
             <form action="#">
                 <div class="form first">
-                    <div class="details personal"></div>
-                    <span class="title">Personal Details</span>
-
+                    <div class="details personal">
+                        <span class="title">Personal Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label for="">Full Name</label>
+                                <input type="text" placeholder="Enter your name">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Date of Birth</label>
+                                <input type="date" placeholder="dd/mm/yyyy">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Email</label>
+                                <input type="text" placeholder="Enter your email">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Mobile Number</label>
+                                <input type="text" placeholder="Enter mobile number">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Gender</label>
+                                <input type="text" placeholder="Enter your gender">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Occupation</label>
+                                <input type="text" placeholder="Enter your occupation">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details ID">
+                        <span class="title">Identity Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label for="">ID Type</label>
+                                <input type="text" placeholder="Enter ID type">
+                            </div>
+                            <div class="input-field">
+                                <label for="">ID Number</label>
+                                <input type="text" placeholder="Enter ID number">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Issue Authority</label>
+                                <input type="text" placeholder="Enter issue department">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Issued State</label>
+                                <input type="text" placeholder="Enter issued state">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Issued Date</label>
+                                <input type="date" placeholder="dd/mm/yyy">
+                            </div>
+                            <div class="input-field">
+                                <label for="">Expiry date</label>
+                                <input type="date" placeholder="dd/mm/yyy">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
                     <div class="fields">
                         <div class="input-field">
-                            <label for="">Full Name</label>
-                            <input type="text" placeholder="Enter your name" required>
+                            <label for="">Address line 1</label>
+                            <input type="text" placeholder="Enter your address" required>
                         </div>
                         <div class="input-field">
-                            <label for="">Date of Birth</label>
-                            <input type="date" placeholder="dd/mm/yyyy" required>
+                            <label for="">Address line 2</label>
+                            <input type="text" placeholder="Enter your address" required>
                         </div>
                         <div class="input-field">
-                            <label for="">Email</label>
-                            <input type="text" placeholder="Enter your email" required>
+                            <label for="">Country</label>
+                            <input type="text" placeholder="Enter your County" required>
                         </div>
                         <div class="input-field">
-                            <label for="">Mobile Number</label>
-                            <input type="text" placeholder="Enter mobile number" required>
+                            <label for="">City</label>
+                            <input type="text" placeholder="Enter your city" required>
                         </div>
                         <div class="input-field">
-                            <label for="">Gender</label>
-                            <input type="text" placeholder="Enter your gender" required>
+                            <label for="">County</label>
+                            <input type="text" placeholder="Enter your County" required>
                         </div>
                         <div class="input-field">
-                            <label for="">Occupation</label>
-                            <input type="text" placeholder="Enter your occupation" required>
+                            <label for="">Eircode</label>
+                            <input type="text" placeholder="Enter your eircode" required>
                         </div>
-                    </div>
-                    <span class="title">Identity Details</span>
-                    <div class="fields">
-                    <div class="input-field">
-                        <label for="">ID Type</label>
-                        <input type="text" placeholder="Enter ID type" required>
-                    </div>
-                    <div class="input-field">
-                        <label for="">ID Number</label>
-                        <input type="text" placeholder="Enter ID number" required>
-                    </div>
-                    <div class="input-field">
-                        <label for="">Issue Authority</label>
-                        <input type="text" placeholder="Enter issue department" required>
-                    </div>
-                    <div class="input-field">
-                        <label for="">Issued State</label>
-                        <input type="text" placeholder="Enter issued state" required>
-                    </div>
-                    <div class="input-field">
-                        <label for="">Issued Date</label>
-                        <input type="date" placeholder="dd/mm/yyy" required>
-                    </div>
-                    <div class="input-field">
-                        <label for="">Expiry date</label>
-                        <input type="date" placeholder="dd/mm/yyy" required>
-                    </div>
                     </div>
                 </div>
-
-            </form>
-            <button>Next</button>
-
+                <div class="details family">
+                    <span class="title">Family Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="">Father Name</label>
+                            <input type="text" placeholder="Enter father name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="">Mother Name</label>
+                            <input type="text" placeholder="Enter mother name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="">Spouse</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="">Children</label>
+                            <input type="number" placeholder="How many children you have" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="">Child's name</label>
+                            <input type="text" placeholder="Your child's name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="">Children's age </label>
+                            <input type="text" placeholder="Your child's age" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="backBtn">
+                        <i class="uil uil-navigator"></i>
+                        <span class="btnText">Back</span>
+                    </button>
+                    <button class="doneBtn">
+                        <span class="btnText">Done</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
         </div>
         
 
-        <script src="" async defer></script>
+        <script src="script.js" async defer></script>
     </body>
 </html>

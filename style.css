@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
 }
 
@@ -28,10 +28,37 @@ body {
 
 .container form {
     position: relative;
-    min-height: 490px;
-    background-color: #fff;
     margin-top: 16px;
+    min-height: 510px;
+    background-color: #fff;
+    overflow: hidden;
 }
+
+.container form .form {
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+    
+}
+
+.container form .form.second {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(105%);
+}
+
+.container form.secActive .form.first {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-105%);
+}
+
+.container form.secActive .form.second {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0%);
+}
+
 
 .container header {
     position: relative;
@@ -45,17 +72,14 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -1px;
+    bottom: -2px;
     width: 25px;
     height: 5px;
     border-radius: 8px;
     background-color: #4070f4;
 }
-.container form .details {
-    margin-top: 10px;
-}
 
-.fields {
+.container form .fields {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -63,7 +87,7 @@ body {
 }
 
 .input-field {
-    padding: 10px;
+    padding: 5px 0px;
     display: flex;
     flex-direction: column;
     margin: 4px 0;
@@ -83,18 +107,14 @@ body {
     min-width: 230px;
 }
 
-.input-field input:is(:active, :valid) {
+.input-field input:is(:focus) {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
 }
 
 .input-field input[type=date] {
     color: #707070;
-    font-size: 18px;
-    padding-left: 20px;
-}
-
-.input-field input[type=date]:valid {
-    color: #333;
+    font-size: 14px;
+    padding-left: 10px;
 }
 
 .input-field label {
@@ -108,24 +128,66 @@ body {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
-    font-weight: 500;
-    margin: 6px 0;
+    font-weight: 600;
+    margin: 15px 0 5px;
     color: #333;
 }
 
 ::placeholder {
-    font-size: 18px;
-    padding-left: 20px;
+    font-size: 14px;
 }
 
-button {
-    margin: 0 40px 40px 40px;
-    padding: 10px 80px;
+.container form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin: 25px 0;
     background-color: #4070f4;
     color: #fff;
-    font-weight: 400;
     border: none;
-    border-radius: 10px;
+    outline: none;
     cursor: pointer;
+    transition: all 0.3s linear;
+
 }
 
+form button:hover {
+    background-color: #265df2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+form button i {
+    margin: 4px 8px 0;
+}
+
+form .backBtn i {
+    transform: rotate(180deg);
+    margin: -4px 8px 0;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+    .container form {
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+        display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px)
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+      width:100%}
+}
